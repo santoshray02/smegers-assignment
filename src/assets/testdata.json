@@ -1,0 +1,50 @@
+{
+  "stock": {
+    "stock_price": "1,626",
+    "growth_history": [
+      {
+        "growth": 0.5,
+        "label": "1 Day"
+      },
+      {
+        "growth": 4.1,
+        "label": "1 Week"
+      },
+      {
+        "growth": 4.7,
+        "label": "1 Mo"
+      },
+      {
+        "growth": 38.5,
+        "label": "1 Yr"
+      },
+      {
+        "growth": 27.6,
+        "label": "5 Yr"
+      },
+      {
+        "growth": 22.5,
+        "label": "10 Yr"
+      }
+    ],
+    "short_name": "HDFC Bank",
+    "industry_name": "Bank - Private",
+    "current_price": "1,626",
+    "yearly_growth": 17.3,
+    "symbol": "HDFCBANK",
+    "industry": "Financials > Bank - Private",
+    "graphs": {
+      "stock_price": {
+        "values": [
+          0, 0, 0, 189, 197, 219, 307, 281, 249,133,843 ,752, 945, 124,825, 122, 131, 162,12,250,
+          0, 0, 0, 189, 197, 219, 307, 281, 249,133,843 ,752, 945, 124,825, 122, 131, 162,15,200,825, 122, 131, 162,15,200
+        ]
+      },
+      "x_axis": {
+        "values": [
+          "Mar06", "Jun06", "Sep06", "Dec06", "Mar07", "Jun07", "Sep07", "Dec07", "Mar08", "Jun08", "Sep08", "Dec08", "Mar09", "Jun09", "Sep09", "Dec09", "Mar10", "Jun10", "Sep10", "Dec10", "Mar11", "Jun11", "Sep11", "Dec11", "Mar12", "Jun12", "Sep12", "Dec12", "Mar13", "Jun13", "Sep13", "Dec13", "Mar14", "Jun14", "Sep14", "Dec14", "Mar15", "Jun15", "Sep15", "Dec15", "Mar16", "Jun16", "Sep16", "Dec16", "Mar17"
+        ]
+      }
+    }
+  }
+}

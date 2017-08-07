@@ -1,0 +1,66 @@
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-xl-12">
+
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-table"></i> Tables
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class=" col-lg-12">
+                        <h2>Table Data</h2>
+                        <div class="table-responsive table-sm">
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th class="note arrow-up">Company </th>
+                                        <th>Current Price</th>
+                                        <th>Count</th>
+                                        <th>ABP</th>
+                                        <th>Returns (%)</th>
+                                        <th>Daily (%)</th>
+                                        <th>Industry</th>
+                                        <th>Ticker Symbol</th>
+                                      </tr>
+                                </thead>
+                                <tbody>
+                                        <tr *ngFor = 'let com of portfolio'>
+                                            <td class="dot-yellow" *ngIf ="com.valuation=='attractive'"><a href='companyinfo/{{ com.slug }}'> {{com.name}}</a></td>
+                                            <td class="dot-blue" *ngIf ="com.valuation=='unattractive'"><a href='companyinfo/{{ com.slug }}'> {{com.name}}</a></td>
+                                            <td class="dot-green" *ngIf ="com.valuation=='fair'"><a href='companyinfo/{{ com.slug }}'> {{com.name}}</a></td>
+                                            <td >{{com.current_price}}</td>
+                                            <td >{{com.count}}</td>
+                                            <td >{{com.avg_buy_price}}</td>
+                                            <td class="arrow-up" *ngIf ="com.returns_percentage> 0 ">{{com.returns_percentage}} % </td> 
+                                            <td class="arrow-down" *ngIf ="com.returns_percentage<=0">{{com.returns_percentage}} % </td> 
+                                            <td class="arrow-down" *ngIf ="com.daily_percentage< 0">{{com.daily_percentage}} % </td>  
+                                            <td class="arrow-up" *ngIf ="com.daily_percentage>= 0">{{com.daily_percentage}} % </td>  
+                                            <td>{{com.industry}}</td>
+                                            <td>{{com.ticker_symbol}}</td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+

@@ -1,0 +1,60 @@
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+    <ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+        <a class="nav-link" href="#1day" role="tab" data-toggle="tab">1 DAY<span class="bottom-line">10%</span></a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#1week" role="tab" data-toggle="tab">1 Week<span class="bottom-line">10%</span></a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#1month" role="tab" data-toggle="tab">1 Month<span class="bottom-line">10%</span></a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#1year" role="tab" data-toggle="tab">1 Year <span class="bottom-line">10%</span></a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#5year" role="tab" data-toggle="tab">5 Year<span class="bottom-line">10%</span></a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link active" href="#10year" role="tab" data-toggle="tab">10 Year<span class="bottom-line">10%</span></a>
+  </li>
+</ul>
+  </div>
+
+
+        <div class="col-md-12 ">
+          <div class="card">
+            <div class="card-header">
+              Trends
+            </div>
+            <div class="card-block "><h4 class="card-title">{{title}}</h4></div>
+    
+            <div style="display: block;" class="center-block">
+              <canvas baseChart width="600" height="200"
+                          [datasets]="lineChartData"
+                          [labels]="lineChartLabels"
+                          [options]="lineChartOptions"
+                          [colors]="lineChartColors"
+                          [legend]="lineChartLegend"
+                          [chartType]="lineChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12" style="margin-bottom: 10px">
+          <table class="table table-responsive table-sm">
+            <tr>
+              <th *ngFor="let label of lineChartLabels">{{label}}</th>
+            </tr>
+            <tr *ngFor="let d of lineChartData">
+              <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+            </tr>
+          </table>
+        </div>
+  </div>
+</div>
+
